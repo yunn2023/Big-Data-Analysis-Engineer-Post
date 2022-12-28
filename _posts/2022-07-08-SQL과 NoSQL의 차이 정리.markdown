@@ -33,7 +33,7 @@ NoSQL의 사용 예시는
 - 인스타그램, 페이스북, 구글
 - 공장의 센서로 정보를 대량으로 수집하여 스마트팩토리/IoT구축
 
-![NoSQL설명](\assets\img\No_SQL.png)
+![NoSQL설명](https://user-images.githubusercontent.com/85277660/209831403-034667d5-885f-4eda-9812-efa7a1914561.png)
 
 예를 들어 MongoDB와 카우치DB (Apache CouchDB)에서 사용하는 쿼리언어는 서로 다릅니다. 하지만 이 두 쿼리는 NoSQL에 속하게 됩니다. 어찌되었건 SQL이 아니기 때문입니다. 그렇기에 반대로 말해서 NoSQL이 No RDBMS를 의미하는 것은 아닙니다. 여러 예외적으로 SQL을 부분적으로 사용하는 DB가 존재하기 때문입니다. 그렇기 때문에 NoSQL이라고 정해진 명확한 정의는 없습니다.
 
