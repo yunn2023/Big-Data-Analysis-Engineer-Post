@@ -1,7 +1,7 @@
 ---
 title:  Ant부터 Gradle까지 Build System 정리
 date:   2022-07-29 12:38:46 +0900
-categories: [JAVA]
+categories: [Languages, JAVA]
 tags: [java, intellij]
 render_with_liquid: false
 ---
