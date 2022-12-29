@@ -1,7 +1,7 @@
 ---
 title:  JAVA에서 DB를 핸들링하는 3가지 방법
 date:   2022-06-29 09:38:46 +0900
-categories: [JAVA]
+categories: [Languages, JAVA]
 tags: [java, db, spring, jpa]
 math: true
 mermaid: true
