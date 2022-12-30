@@ -86,10 +86,10 @@ avatar: '/commons/avatar.jpg'
 # boolean type, the global switch for ToC in posts.
 toc: true
 
-comments:
-  active:         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+comments:      true
+  active:      disqus   # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
-  disqus:
+  disqus:      true
     shortname: https-jeong-daniel-github-io-2    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
@@ -117,7 +117,7 @@ assets:
 pwa:
   enabled: true   # the option for PWA feature
 
-paginate: 10
+paginate: 8
 
 # ------------ The following options are not recommended to be modified ------------------
 
