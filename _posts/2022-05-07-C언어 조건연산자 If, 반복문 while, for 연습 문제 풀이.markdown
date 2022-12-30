@@ -507,3 +507,284 @@ printf("초고도비만");
 이것도 뭐 실수이니 정수로 주는 실수를 하면 안되는거 말고는 크게 어려울 것은 없는거 같다.
 
 지금보니 조건을 조금 잘못 주기는 했는데 if문이라는게 거르고 넘어가는거다보니 문제는 없을 것이다.
+
+### 다음을 참고로 표준입력으로 받은 종합소득 금액에 따른 세율을 출력하는 프로그램을작성1200만원 이하 6% // 4600만원 이하 15% // 8800만원 이하 24% // 3억원 이하 35% // 3억원 초과 38%
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210071416-dcbbfec7-33f9-4dbc-9f2f-3aa13e052366.png)
+
+```c
+#include  <stdio.h>
+int main() 
+{ 
+int i; 
+printf("소득을 입력하세요(단위:만원 1200만원인경우 1200) :"); 
+scanf("%d",&i); 
+printf("%d만원의 세율은 ",i); 
+if(i<=1200) 
+printf("6%%"); 
+else if(i<=4600) 
+printf("15%%"); 
+else if(i<=8800) 
+printf("24%%"); 
+else if(i<=30000) 
+printf("35%%"); 
+else if(i>=30000) 
+printf("38%%"); 
+}
+```
+이거는 뭐... 설명할 것도 없을거 같은데
+
+### 문자 하나와 온도를 실수형으로 입력 받아, 문자가 F나 f이면 입력 받은 값을 화씨로 간주하여 섭씨로 바꾸고, 입력받은 문자가 C나 c면 입력받은 값을 섭씨로 간주하여 화씨로 바꾸어 결과를 출력하는 프로그램을 작성하세요F = (9.0/5.0)*C + 32C = (5.0/9.0)*(F-32)
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210071453-0ff4063f-5ec1-4bd7-9bfd-43196bdc606c.png)
+
+```c
+#include  <stdio.h>
+int main() 
+{ 
+double k; 
+int i; 
+char j; 
+printf("온도입력(예 53F, 25C):"); 
+scanf("%d%c",&i,&j); 
+if(j=='c'||j=='C') 
+  { 
+  k=((9.0/5.0)*i+32); 
+  printf("%d%c = %.2fF",i,j,k); 
+  } 
+else if(j=='f'||j=='F') 
+  { 
+  k=((5.0/9.0)*(i-32)); 
+  printf("%d%c = %.2fC",i,j,k); 
+  } 
+}
+```
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210071478-2eee20ef-7bed-4661-8e01-4645fa341ce7.png)
+
+처음부터 C와 F인거를 알지 못하고 입력받는걸로 구분하라고해서 당황스러웠는데 상당하게 간단하게 풀렸다. 뒤에 F,C를 scanf로 마찬가지로 받아주고 if문으로 C인지 F인지 구분해주면 됬다. 그런데 여기서는 소문자와 대문자를 구분하니 if(j=='c'||j=='C'),  else if(j=='f'||j=='F')으로 해주고, 뭐 아니면 잘못입력했다고 해주면 되니.
+
+처음에는 스페이스바없이 그냥 바로 입력이 되나 했는데, 정수형과 문자형은 확실히 다르니
+
+물론 if문 대신 switch문으로 해도 된다.
+
+
+
+### 각자리수의 짝수 홀수 판단해보기정숫값 하나를 입력받는다. (예를 들어 352라고 하자)각 자릿수의 숫자의 홀수인지 짝수인지 판단하여 100의 자리 3은 홀수, 10의 자리 5는 홀수, 1의 자리 2는 짝수’라고 출력한다.나눗셈 연산자(/)와 나머지 값을 계산하는 연산자(%)를 사용한다.
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210071496-62c04bd4-3ee4-4a88-a67a-c0b2377a8c1e.png)
+
+필요한 변수는? : num, digit_1, digit_10, digit_100
+
+```c
+#include  <stdio.h>
+int main() 
+{ 
+int num, digit_1, digit_10, digit_100; 
+printf("정수값 하나 입력하기: "); 
+scanf("%d",&num); 
+digit_100=num/100; 
+digit_10=num/10; 
+digit_1=num%10; 
+if(digit_100%2) 
+printf("\n100의 자리는 홀수\n"); 
+else 
+printf("\n100의 자리는 짝수\n"); 
+if(digit_10%2) 
+printf("\n10의 자리는 홀수\n"); 
+else 
+printf("\n10의 자리는 짝수\n"); 
+if(digit_1%2) 
+printf("\n1의 자리는 홀수\n"); 
+else 
+printf("\n1의 자리는 짝수\n"); 
+}
+```
+
+일단 3자리라고 가정을 하고 풀어 봤는데, 3자리가 넘어가는 경우에 1000으로 나누었을때 몫이 1이상이면 빠져나온다거나, 아니면 num>=1000을 해도 될것이다. 여기서는 변수를 1,10,100으로 주어져있어서 간단하게 해보았다.
+
+위에 do-while문을 이용해서 임의의 자리수를 입력해도 각 자리수를 알 수 있지 않을까 했는데 
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210071519-f829cde3-05cf-48b2-87ca-683cfd1b2cbf.png)
+
+```c
+#include  <stdio.h>
+int main() 
+{ 
+int num, digit_1, digit_10=1; 
+printf("정수값 하나 입력하기: "); 
+scanf("%d",&num); 
+digit_1; 
+do{ 
+digit_1=num%10; 
+if(digit_1%2) 
+printf("%d의 자리는 홀수입니다.\n",digit_10); 
+else 
+printf("%d의 자리는 짝수입니다.\n",digit_10); 
+num=num/10;  
+digit_10=digit_10*10; 
+}while(num); 
+}
+```
+
+가능은하다. 반대로는 어떻게 해야할지 모르겠다는게 함정이지만
+
+### 놀이공원 입장료 계산하기
+
+12세이하 또는 65세 이상은 25,000 성인은 35,000, 야간입장(17시 이후)에는 인당 1만원
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210071565-a30d80ec-8505-4633-9c8d-d448d7ea516b.png)
+
+```c
+#include  <stdio.h>
+int main() 
+{ 
+int age,time,count,fee,final_fee; 
+printf("나이 입력 : "); 
+scanf("%d",&age); 
+printf("인원수 입력 : "); 
+scanf("%d",&count); 
+printf("입장시간(24시 기준) : "); 
+scanf("%d",&time); 
+if(time>=17) 
+{ 
+fee=10000; 
+printf("인당 입장료 : %d\n",fee); 
+final_fee=fee*count; 
+printf("총 입장료 : %d",final_fee); 
+} 
+else if(age>=65||age<=12) 
+{ 
+fee=25000; 
+printf("인당 입장료 : %d\n",fee); 
+final_fee=fee*count; 
+printf("총 입장료 : %d",final_fee); 
+} 
+else 
+{ 
+fee=35000; 
+printf("인당 입장료 : %d\n",fee); 
+final_fee=fee*count; 
+printf("총 입장료 : %d",final_fee); 
+} 
+}
+```
+
+변수는 3가지 나이, 인원, 입장시간 거기에다가 야간입장의 경우 나이와 상관없이 할인이 되니 먼저 적용해주고 나머지 각각 물어보는 식으로 하면 쉽게 처리가 된다.
+
+ 
+
+자주실수하는 오류 오타는 말할 것도 없고,
+
+정수출력-실수출력 잘못지정,(f로 입력받아야 하는데 d로 지정해주고 값이 안나온다거나)
+
+scnaf("%d",&i) 에서 "여기"에 쉼표 같은 엉뚱한거 집어 넣거나,
+
+&i 처럼 &라고 주소연산자를 지정해줘야 하는데 i만 달랑 쓴다거나 &대신에 %집어 넣기
+
+for, if문 뒤에 세미콜론 ; 붙여버리기
+
+
+### 프로그램 사용자로부터 양의 정수를 하나 입력 받아서 ,그 수만큼 "Hello world!"를 출력하는 프로그램을 작성해보자.
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210071597-f0ce465d-3ddf-4359-8cef-e26e90ea80a2.png)
+
+시험시간이 3시간정도 남았는데 그냥 문제 보이는대로 닥치는데로 풀어볼려고 한다.
+
+```c
+int main() 
+{ 
+int i,j=0; 
+printf("양의 정수를 입력하세요 : "); 
+scanf("%d",&i); 
+while(i>j) 
+{ 
+  j++; 
+  printf("Hello wolrd! %d\n",j); 
+} 
+}
+```
+
+
+### 프로그램 사용자로부터 양의 정수를 하나 입력 받은 다음, 그 수만큼 3의 배수를 출력하는 프로그램을 작성해 보자, 예를 들어서 5를 입력 받았다면 3 6 9 12 15를 출력해야 한다.
+
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210071629-9a2e3e6f-1938-4ffe-bca7-299ffd67399a.png)
+
+```c
+int main() 
+{ 
+int i,j=0; 
+printf("양의 정수를 입력하세요 :"); 
+scanf("%d",&i); 
+while(i>j) 
+{ 
+  j++; 
+  printf("%d ",j*3); 
+} 
+}
+```
+
+### 사용자로부터 계속해서 정수를 입력 받는다. 그리고 그 값을 계쏙해서 더해 나간다. 이러한 작업은 사용자가 0을 입력할때까지 계속되어야 하며, 0이 입력되면 입력된 모든 정수의 합을 출력하고 프로그램을 종료 시킨다.
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210071666-ab97a7d1-353a-4dc2-9f71-426a24d0fa37.png)
+
+```c
+int main() 
+{ 
+int i,sum=0; 
+while(1) 
+{ 
+  printf("숫자를 입력하세요 :"); 
+  scanf("%d",&i); 
+  sum=sum+i; 
+  if(i==0) 
+  break; 
+} 
+printf("총합은 %d 입니다.",sum); 
+}
+```
+
+### 입력받은 숫자에 해당하는 구구단을 출력하되 역순으로 출력하는 프로그램을 작성해보자
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210071698-c15f4ac3-e0d6-4c48-a7cd-bedfeef82b29.png)
+
+```c
+int main() 
+{ 
+int i,j=9; 
+printf("구구단할 숫자를 입력하세요: "); 
+scanf("%d",&i); 
+while(j>0) 
+{ 
+  printf("%d x %d = %d\n",i,j,i*j); 
+  j--; 
+} 
+}
+```
+
+### 입력받은 정수의 평균을 출력하는 프로그램을 작성하되 다음 두 가지 조건을 만족시켜야 한다.몇개의 정수를 입력할지 사용자에게 묻는다, 그리고 그 수만큼 입력받는다.
+
+평균 값은 소수점 이하 까지 계산해서 출력한다.
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210071737-25fd9b82-ce5c-4dc1-9f33-a16723ca5f7e.png)
+
+```c
+int main() 
+{ 
+int num,j=1; 
+double avg,k,i; 
+printf("몇개의 정수 : "); 
+scanf("%lf",&i); 
+while(i>=j) 
+{ 
+  printf("정수를 입력하세요"); 
+  scanf("%d",&num); 
+  k=k+num; 
+  j++; 
+ } 
+printf("평균값은 %g입니다.",k/i); 
+}
+```
+
+끝!
