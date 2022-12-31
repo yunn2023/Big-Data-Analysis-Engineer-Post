@@ -23,3 +23,7 @@ TDD말고도 굉장히 다양한 개발문화와 철학이 있는 것도 이번�
 4. EDM Event-Driven Microservices 이벤트 주도 마이크로서비스
 
 그리고 마침 책의 첫 장에서도 목표는 내가 필요한 3가지가 중심이다. TDD와 BDD의 의미는, 그리고 이를 머신러닝 개념에 적용하고 추론분석과 예측분석 모델을 만들 수 있는 방법, 마지막으로 이런 분석 모델은 어떻게 작동하는가?
+
+{% if site.disqus.shortname %}
+{% include disqus.html %}
+{% endif %}
