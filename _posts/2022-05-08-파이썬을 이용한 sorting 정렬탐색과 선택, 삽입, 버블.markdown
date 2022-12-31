@@ -1,9 +1,8 @@
 ---
-title: 파이썬을 이용한 sorting 정렬과 탐색 선택, 삽입, 버블
+title: 파이썬을 이용한 sorting 정렬탐색과 선택, 삽입, 버블
 date:   2022-05-08 19:42:41 +0900
 categories: [Languages, Python]
 tags: [python, coding, algorithm, sorting]
-comments: true
 ---
 
 ## 정렬 개요 sorting
