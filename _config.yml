@@ -54,7 +54,7 @@ google_site_verification: a1g__2BUQ-442quRYLgDEm3xWGXESzfHIUxmRkOYEBQ           
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id:                 # fill in your Google Analytics ID
+  id:  347770388      # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
@@ -90,6 +90,7 @@ comments:
   active:   # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   disqus: 
+    comments: true
     shortname: https-jeong-daniel-github-io-2    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
