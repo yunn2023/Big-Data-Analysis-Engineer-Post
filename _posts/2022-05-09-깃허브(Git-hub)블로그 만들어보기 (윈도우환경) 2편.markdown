@@ -179,9 +179,9 @@ git push
 
 그러면 이제 간단하게 테마나 적용해봅시다.
 
-(https://jekyllthemes.io/)[https://jekyllthemes.io/]
-(http://jekyllthemes.org/)[http://jekyllthemes.org/]
-(https://jekyll-themes.com/)[https://jekyll-themes.com/]
-(https://jamstackthemes.dev/ssg/jekyll/)[https://jamstackthemes.dev/ssg/jekyll/]
+[ttps://jekyllthemes.io/](https://jekyllthemes.io/)
+[http://jekyllthemes.org/](http://jekyllthemes.org/)
+[https://jekyll-themes.com/](https://jekyll-themes.com/)
+[https://jamstackthemes.dev/ssg/jekyll/](https://jamstackthemes.dev/ssg/jekyll/)
 
 꼭 제가 할 테마를 따라서 찾을 필요없이 여기서 마음에드는 페이지를 찾고 진행을 해도 됩니다.

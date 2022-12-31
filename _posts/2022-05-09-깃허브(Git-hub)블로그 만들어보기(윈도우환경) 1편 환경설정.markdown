@@ -11,7 +11,7 @@ tags: [blog, git, github, ruby]
 
 나중에 시간이 난다면 제가 git에 대해서 간단하게 글을 올려보도록 하겠습니다.
 
-(git과 github 활용 특강 강좌소개 edwith)[https://www.edwith.org/gitandgithub/joinLectures/42169]
+[git과 github 활용 특강 강좌소개 edwith](https://www.edwith.org/gitandgithub/joinLectures/42169)
 
 아니면 본인이 git에 대해서 좀더 깊게 알고 싶고 시간도 있으시면 첫번째는 git의 등장배경의 이론이고 3은 협업을 위한 것인데 거기 까지는 필요없고 바로 두번째 <2. Git과 GitHub - 명령어로 배우는 Git> 영상 보고 오시는 정도여도 충분할겁니다. 다만 강의 시간이 1시간 30분정도로 약간 긴편인데 따라치는시간 까지하면 좀더 길어질겁니다.
 
@@ -53,11 +53,11 @@ tags: [blog, git, github, ruby]
 아니면 테마 나온그대로 쓰실거면 딱히 신경 안쓰셔도 될지 모르겠네요
 
 
-(Git 공식 주소)[https://git-scm.com/]
+[Git 공식 주소](https://git-scm.com/)
 
 뭐 당연하듯이 깃은 설치가 되어 있어야 합니다. GUI든 터미널이든 편한걸로 준비하시면 됩니다.
 
-(루비 다운로드 주소)[https://rubyinstaller.org/downloads/]
+[루비 다운로드 주소](https://rubyinstaller.org/downloads/)
 
 
 ![루비 홈페이지](https://user-images.githubusercontent.com/85277660/210135997-0e7a911c-6e3c-4fda-b630-a0f3bf191ffc.png)
