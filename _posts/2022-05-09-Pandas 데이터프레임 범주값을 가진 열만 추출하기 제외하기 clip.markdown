@@ -1,5 +1,5 @@
 ---
-title: 판다스 이상치를 최대/최소로 변환하는 방법 clip()
+title: Pandas 데이터프레임 범주값을 가진 열만 추출하기/제외하기
 date:   2022-05-09 21:29:41 +0900
 categories: [Data_Sceince, Pandas]
 tags: [pandas, data, python]
