@@ -2,7 +2,7 @@
 title: 파이썬 문자열 회문 확인 프로그램 만들기
 date:   2022-05-08 23:42:41 +0900
 categories: [Languages, Python]
-tags: [python, coding, algorithm, sorting]
+tags: [python, coding, algorithm, stack]
 ---
 
 문제 : 회문(Palindrome)이란 앞뒤 어느 쪽에서 읽어도 같은 말과 구문을 뜻한다. "eye", "madam", "I'm Adam", "race car"등은 모두 회문이라고 할 수 있다. 물론 구두점, 스페이스(공백), 대소문자등을 무시를 해야한다.
