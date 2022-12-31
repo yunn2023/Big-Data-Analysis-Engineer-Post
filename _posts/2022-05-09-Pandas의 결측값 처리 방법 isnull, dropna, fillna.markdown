@@ -1,6 +1,6 @@
 ---
 title: Pandas의 결측값 처리 방법 isnull, dropna, fillna
-date:   2022-07-10 16:29:41 +0900
+date:   2022-05-10 16:29:41 +0900
 categories: [Data_Sceince, Pandas]
 tags: [pandas, data, python]
 ---
