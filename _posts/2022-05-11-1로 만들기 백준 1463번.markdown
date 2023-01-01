@@ -1,13 +1,11 @@
 ---
 title: 1로 만들기 백준 1463번 
-date:   2022-05-11 20:20:41 +0900
+date:   2022-05-11 20:50:41 +0900
 categories: [Coding_Test, BOJ]
 tags: [coding, python, algorithm, dynamic]
 ---
 
-
 [백준 1463번 문제](https://www.acmicpc.net/problem/1463)
-
 
 정수 X에 사용할 수 있는 연산은 다음과 같이 세 가지 이다.
 
