@@ -1,5 +1,5 @@
 ---
-title: 깊이 우선 탐색을 위한 파이썬 알고리즘
+title: 깊이 우선 탐색을 위한 파이썬 알고리즘 DFS
 date:   2022-05-08 08:22:41 +0900
 categories: [Languages, Python]
 tags: [python, coding, algorithm, dfs, recursive, stack]
