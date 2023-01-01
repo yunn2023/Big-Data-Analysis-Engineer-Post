@@ -17,7 +17,7 @@ def recur(num):
 print(recur(n))
 ```
 
-[1부터 n까지 합 구하기](https://jeong-daniel.github.io/posts/1%EB%B6%80%ED%84%B0-n%EA%B9%8C%EC%A7%80-%EA%B3%B1%ED%95%98%EB%8A%94-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-%EA%B3%84%EC%82%B0/)
+[1부터 n까지 합 구하기](https://jeong-daniel.github.io/posts/1%EB%B6%80%ED%84%B0-n%EA%B9%8C%EC%A7%80-%ED%95%A9-%EA%B5%AC%ED%95%98%EA%B8%B0/)
 
 바로 지난번 글에서 1부터 n까지 더하기에서 더하는것을 곱하는것으로 반환하면 됩니다.
 
