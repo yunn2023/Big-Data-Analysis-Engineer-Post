@@ -1,5 +1,5 @@
 ---
-title: 실기 작업형 1유형 데이터 처리 영역 풀이
+title: 빅분기 실기 작업형 1유형 데이터 처리 영역 풀이
 date:   2022-05-11 23:11:41 +0900
 categories: [Certificate, 빅데이터분석기사]
 tags: [python, bigdata, data, pandas, ml]
