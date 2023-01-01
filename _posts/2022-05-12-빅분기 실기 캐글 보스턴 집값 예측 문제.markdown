@@ -15,7 +15,7 @@ tags: [python, bigdata, data, pandas, ml]
 
 여러가지 유명한 것들이 있는데 거의 한번씩은 다들 보는 타이타닉과 보스턴 집값 문제 그리고 한두개정도 더 해볼 계획입니다. 가장 먼저 집값 예측 문제로 가볍게 시작하겠습니다.
 
-[실기 작업형 2유형 모형 구축 및 평가 영역 1편](https://jeong-daniel.github.io/posts/%EB%B9%85%EB%B6%84%EA%B8%B0-%EC%8B%A4%EA%B8%B0-%EC%9E%91%EC%97%85%ED%98%95-2%EC%9C%A0%ED%98%95-%EB%AA%A8%ED%98%95-%EA%B5%AC%EC%B6%95-%EB%B0%8F-%ED%8F%89%EA%B0%80-%EC%98%81%EC%97%AD-1%ED%8E%B8/)
+[빅분기 실기 작업형 2유형 모형 구축 및 평가 영역 1편](https://jeong-daniel.github.io/posts/%EB%B9%85%EB%B6%84%EA%B8%B0-%EC%8B%A4%EA%B8%B0-%EC%9E%91%EC%97%85%ED%98%95-2%EC%9C%A0%ED%98%95-%EB%AA%A8%ED%98%95-%EA%B5%AC%EC%B6%95-%EB%B0%8F-%ED%8F%89%EA%B0%80-%EC%98%81%EC%97%AD-1%ED%8E%B8/)
 
 여려번 말씀을 드렸지만 아마 2회 실험에서 오류도 있었기에 신유형이 나오기는 어려우며 전체 작업 시간이 1분 이내인 점 고도화되고 복잡한 머신러닝은 사용하기 힘들 것입니다. 목적 자체가 너 이거 해볼 수 있어? 정도 이기 때문에 최대한 간단하게 접근을 하고 일단 돌리는 것을 목적으로 하겠습니다.
 
@@ -41,7 +41,7 @@ train 데이터를 기준으로 보면 0번부터 1460개의 열과 81개의 컬
 
 test를 보시면 id가 1461번부터 총 1459개의 행이 들어 있는데 열이 하나가 빠졌지요 우리가 구해야할 SalePrice입니다.
 
-[실기 작업형 2유형 모형 구축 및 평가 영역 2편](https://jeong-daniel.github.io/posts/%EB%B9%85%EB%B6%84%EA%B8%B0-%EC%8B%A4%EA%B8%B0-%EC%9E%91%EC%97%85%ED%98%95-2%EC%9C%A0%ED%98%95-%EB%AA%A8%ED%98%95-%EA%B5%AC%EC%B6%95-%EB%B0%8F-%ED%8F%89%EA%B0%80-%EC%98%81%EC%97%AD-2%ED%8E%B8/)
+[빅분기 실기 작업형 2유형 모형 구축 및 평가 영역 2편](https://jeong-daniel.github.io/posts/%EB%B9%85%EB%B6%84%EA%B8%B0-%EC%8B%A4%EA%B8%B0-%EC%9E%91%EC%97%85%ED%98%95-2%EC%9C%A0%ED%98%95-%EB%AA%A8%ED%98%95-%EA%B5%AC%EC%B6%95-%EB%B0%8F-%ED%8F%89%EA%B0%80-%EC%98%81%EC%97%AD-2%ED%8E%B8/)
 
 지난번 예시로 풀었던 문제와 비슷합니다. train데이터를 가지고 모델을 학습을 하고, test데이터를 가지고 예측을 하고 예측 결과 값을 csv파일로 제출하면 됩니다.
 
@@ -170,7 +170,7 @@ random_search=RandomizedSearchCV(RandomForestRegressor(),
 random_search.fit(X_train, y_train)
 ```
 
-[실기 작업형 2유형 모형 하이퍼파라미터 탐색하기](https://jeong-daniel.github.io/posts/%EB%B9%85%EB%B6%84%EA%B8%B0-%EC%8B%A4%EA%B8%B0-%EC%9E%91%EC%97%85%ED%98%95-2%EC%9C%A0%ED%98%95-%ED%95%98%EC%9D%B4%ED%8D%BC%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-%ED%83%90%EC%83%89%ED%95%98%EA%B8%B0/)
+[빅분기 실기 작업형 2유형 모형 하이퍼파라미터 탐색하기](https://jeong-daniel.github.io/posts/%EB%B9%85%EB%B6%84%EA%B8%B0-%EC%8B%A4%EA%B8%B0-%EC%9E%91%EC%97%85%ED%98%95-2%EC%9C%A0%ED%98%95-%ED%95%98%EC%9D%B4%ED%8D%BC%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-%ED%83%90%EC%83%89%ED%95%98%EA%B8%B0/)
 
 랜덤서치 하는 방법은 하이퍼파라미터 탐색 게시글로 대체하겠습니다.
 

@@ -5,7 +5,7 @@ categories: [Certificate, 빅데이터분석기사]
 tags: [python, bigdata, data, pandas, ml]
 ---
 
-[실기 작업형 2유형 : 모형 구축 및 평가 영역 - 2](https://jeong-daniel.github.io/posts/%EC%8B%A4%EA%B8%B0-%EC%9E%91%EC%97%85%ED%98%95-2%EC%9C%A0%ED%98%95-%EB%AA%A8%ED%98%95-%EA%B5%AC%EC%B6%95-%EB%B0%8F-%ED%8F%89%EA%B0%80-%EC%98%81%EC%97%AD-2%ED%8E%B8/)
+[실기 작업형 2유형 : 모형 구축 및 평가 영역 - 2](https://jeong-daniel.github.io/posts/%EB%B9%85%EB%B6%84%EA%B8%B0-%EC%8B%A4%EA%B8%B0-%EC%9E%91%EC%97%85%ED%98%95-2%EC%9C%A0%ED%98%95-%EB%AA%A8%ED%98%95-%EA%B5%AC%EC%B6%95-%EB%B0%8F-%ED%8F%89%EA%B0%80-%EC%98%81%EC%97%AD-2%ED%8E%B8/)
 
 처음에 진행을 할때는 딱히 높은 성능의 모델을 만들기보다 일단 작동 방법을 보여드리기 위해서 생략한것이 많은데 그중 범주데이터를 다 날린것입니다. 이산형 숫자가 아니라 점포의 이름이나 카테고리등의 경우 처리하는 방법은 좀 다른데요 그것에 대해서 소개하고자 합니다.
 
