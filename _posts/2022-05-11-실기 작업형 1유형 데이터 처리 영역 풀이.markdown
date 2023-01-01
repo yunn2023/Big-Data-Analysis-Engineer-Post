@@ -2,7 +2,7 @@
 title: 실기 작업형 1유형 데이터 처리 영역 풀이
 date:   2022-05-11 23:11:41 +0900
 categories: [Certificate, 빅데이터분석기사]
-tags: [python, bigdata, data, ]
+tags: [python, bigdata, data, pandas, ml]
 ---
 
 12월 4일 빅데이터분석기사 실기가 있는데 준비겸 포스팅을 한 1주일동안 해볼까 합니다. 예시부터 가볍게 풀면서 봅시다. 이 글을 보시는 분들을 기본적으로 파이썬을 다루고 sickit-learn은 모르지만 pandas와 numpy는 다룰수 있다는 전제하에 글을 써볼 생각입니다. 궁금한게 있으면 덧글로 남겨주세요 시험 전까지는 저도 공부할겸 답변드리겠습니다.
