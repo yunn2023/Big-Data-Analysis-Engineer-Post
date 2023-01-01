@@ -1,6 +1,6 @@
 ---
-title: 1부터 n까지 합 구하기
-date:   2022-05-11 11:35:41 +0900
+title: 1부터 n까지 곱하는 팩토리얼 계산
+date:   2022-05-11 12:24:41 +0900
 categories: [Coding_Test, Others]
 tags: [coding, python, algorithm, recursive]
 ---
@@ -12,39 +12,13 @@ def recur(num):
     if num == 1:
         return 1
     else:
-        return num+recur(num-1)
+        return num*recur(num-1)
         
-recur(n)
+print(recur(n))
 ```
 
-recur에서 자기보다 1작은 녀석을 불러오다가 계속 가다보면 1을 만나겠지요 그거를 쭉 더하게 됩니다.
+[1부터 n까지 합 구하기](https://jeong-daniel.github.io/posts/1%EB%B6%80%ED%84%B0-n%EA%B9%8C%EC%A7%80-%EA%B3%B1%ED%95%98%EB%8A%94-%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC-%EA%B3%84%EC%82%B0/)
 
-![img1 reuslt](https://user-images.githubusercontent.com/85277660/210166088-b2b4d110-299e-4abb-b535-7542bee13806.png)
+바로 지난번 글에서 1부터 n까지 더하기에서 더하는것을 곱하는것으로 반환하면 됩니다.
 
-해보면 100이나 1000이 들어가면 문제가 없지만
-
-![max dept](https://user-images.githubusercontent.com/85277660/210166093-c0bb68db-0271-415a-9d50-bf8f25813b8d.png)
-
-기본적으로 파이썬에서는 재귀가 10000번을 넘어가면 재귀함수가 지나치게 많이 실행시켰기에 강제로 종료시켜버리는 문제가 있습니다.
- 
-
-이거보고 아니 여기서 메모이제이션이나 동적프로그래밍이 들어가나 싶었는데
-
-```python
-import sys
-sys.setrecursionlimit(1000000)
-```
-그냥 코드 첫 부분에다가 sys라이브러리를 불러와서 최대 재귀 횟수를 늘려줘야 합니다.
-
- 
-```py
-n = int(input())
-
-def recur(num):
-    a = int(n*(n+1)/2)
-    return print(a)
-
-recur(n)
-```
-
-아니면 가우스식에 다르면 1부터 n까지의 합은 n(n+1)/2로 알려져있으니 재귀랑 상관없이 이거를 써도 통과는 합니다.
+따로 설명할 것도 없네요
