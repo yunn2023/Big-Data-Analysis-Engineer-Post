@@ -5,9 +5,7 @@ categories: [Computer_Vision, Study]
 tags: [opencv, math, vision]
 ---
 
-# Rectification 이해
-
-상태: In progress
+*노션에다가 스터디 정리용으로 올린거였는데 여기서는 Latex 형식의 수학 수식을 지원하지 않아서 다 깨져서 나오네요 나중에 시간 있으면 수정을 하도록 하겠습니다.
 
 # Rectification을 이해해보자
 
