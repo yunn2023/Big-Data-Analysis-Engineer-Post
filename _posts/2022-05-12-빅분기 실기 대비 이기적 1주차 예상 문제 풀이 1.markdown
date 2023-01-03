@@ -7,6 +7,8 @@ tags: [bigdata, data, python, pandas]
 
 csv파일을 주소로 알고 있다면 pandas csv_read에서 바로 주소를 넣으면 읽을 수 있을 겁니다.
 
+## 작업형 1유형
+
 데이터 출처 [https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro](https://data.kma.go.kr/cmmn/static/staticPage.do?page=intro)
 
 데이터 설명 : 2020년도 이화동(서울) , 수영동(부산)의 시간단위의 기온과 강수량
@@ -22,7 +24,7 @@ import pandas as pd
 df = pd.read_csv("https://raw.githubusercontent.com/Datamanim/datarepo/main/weather/weather2.csv")
 ```
 
-Q1. 여름철(6월,7월,8월) 이화동이 수영동보다 높은 기온을 가진 시간대는 몇개인가? 1415개
+### Q1. 여름철(6월,7월,8월) 이화동이 수영동보다 높은 기온을 가진 시간대는 몇개인가? 1415개
 
 ```py
 df.time = pd.to_datetime(df.time)
@@ -33,7 +35,7 @@ len(summer.loc[summer['이화동기온'] > summer['수영동기온']])
 #조건문을 통해서 해당 조건에 속하는 값만 가져오고 len은 행의 길이를 반환
 ```
 
-Q2. 이화동과 수영동의 최대강수량의 시간대를 각각 구하여라
+### Q2. 이화동과 수영동의 최대강수량의 시간대를 각각 구하여라
 ```py
 print(df.loc[df['이화동강수']==df['이화동강수'].max()].time.values)
 print(df.loc[df['수영동강수']==df['수영동강수'].max()].time.values)
@@ -68,7 +70,7 @@ max이외에도 sum, min 여러 종류가 있으며 dixmin의 경우 해당 최�
 
 ---
 
-작업형 2유형
+## 작업형 2유형
 
 데이터 출처 : [https://www.kaggle.com/shubh0799/churn-modelling](https://www.kaggle.com/shubh0799/churn-modelling) 에서 변형
 
