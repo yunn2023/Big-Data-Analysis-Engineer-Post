@@ -5,7 +5,7 @@ categories: [Certificate, 빅데이터분석기사]
 tags: [bigdata, data, python, pandas]
 ---
 
-작업형 1유형
+## 작업형 1유형
 데이터 출처 : [https://www.kaggle.com/shubh0799/churn-modelling](https://www.kaggle.com/shubh0799/churn-modelling) 에서 변형
 
 데이터 설명 : 고객의 신상정보 데이터를 통한 회사 서비스 이탈 예측 (종속변수 : Exited)
@@ -16,7 +16,7 @@ Data url : [https://raw.githubusercontent.com/Datamanim/datarepo/main/churn/trai
 
 ![table view](https://user-images.githubusercontent.com/85277660/210361356-c5ef95d3-7457-4fc0-a571-3da47e77d83f.png)
 
-## Q1. 남성 이탈(Exited)이 가장 많은 국가(Geography)는 어디이고 이탈 인원은 몇명인가?
+### Q1. 남성 이탈(Exited)이 가장 많은 국가(Geography)는 어디이고 이탈 인원은 몇명인가?
 키워드가 3가지 입니다. 남성, 국가, 이탈입니다. 일단 조건은 남성인 열을 먼저 뽑으셔야 겠네요 그리고 국가를 묶은 다음 Exited의 개수를 확인해야 합니다.
 
 ```py
@@ -33,7 +33,7 @@ Germany가 제일 많으며 287입니다. Exited를 빼면
 
  
 
-## Q2. 카드를 소유(HasCrCard ==1)하고 있으면서 활성멤버(IsActiveMember ==1) 인 고객들의 평균나이는?
+### Q2. 카드를 소유(HasCrCard ==1)하고 있으면서 활성멤버(IsActiveMember ==1) 인 고객들의 평균나이는?
 
 카드를 소유하고 있으면서 활성멤버인 사람들인 열을 조건을 걸어서 구한다음 Age에다가 mean을 걸어주면 되겠네요
 
@@ -44,7 +44,7 @@ df.loc[(df['HasCrCard']==1)&(df['IsActiveMember']==1)].Age.mean()
 
  
 
-## Q3. Balance 값이 중간값 이상을 가지는 고객들의 CreditScore의 표준편차를 구하여라
+### Q3. Balance 값이 중간값 이상을 가지는 고객들의 CreditScore의 표준편차를 구하여라
 
 마찬가지입니다. median을가지고 조건을 걸어주고 CreditScore의 std를 구하면 됩니다.
 
@@ -53,7 +53,8 @@ df.loc[(df['Balance']>df['Balance'].median())].CreditScore.std()
 ```
 정답 : 97.3
 
-작업형 2유형
+## 작업형 2유형
+
 데이터 출처 : [https://archive.ics.uci.edu/ml/datasets/Breast%20Cancer%20Wisconsin%20(Diagnostic)](https://archive.ics.uci.edu/ml/datasets/Breast%20Cancer%20Wisconsin%20(Diagnostic)에서 변형
 
 데이터 설명 : 유방암 발생여부 예측 (종속변수 diagnosis : B(양성) , M(악성) )
