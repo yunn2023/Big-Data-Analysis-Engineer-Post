@@ -125,27 +125,27 @@ tags: [bigdata, data, test, certificate]
 
 정답
 
-[1.] NoSQL(Not Only SQL)
-[2.] 완전 무작위 결측(MCAR; Missing Completely At Random)
-[3.] 0.64(또는 16/25)
-[4.] 오픈 API (Open API)
-[5.] SMOTE(Synthetic Minority Over-sampling TEchnique)
-[6.] 정상성(Stationary)
-[7.] 데이터 웨어하우스 (DW; Data warehouse)
-[8.] 드롭아웃(Drop Out)
-[9.] ETL(Extract Transform Load)
-[10.] 민코프스키(Minkowski) 거리
-+ 표준화 거리
-- 변수의 측정단위를 표준화한 거리입니다.
-마할라노비스 거리
-- 변수의 표준화와 함께 변수 간의 상관성(분포 형태)를 동시에 고려한 통계적 거리입니다.
+[1.] NoSQL(Not Only SQL)  
+[2.] 완전 무작위 결측(MCAR; Missing Completely At Random)  
+[3.] 0.64(또는 16/25)  
+[4.] 오픈 API (Open API)  
+[5.] SMOTE(Synthetic Minority Over-sampling TEchnique)  
+[6.] 정상성(Stationary)  
+[7.] 데이터 웨어하우스 (DW; Data warehouse)  
+[8.] 드롭아웃(Drop Out)  
+[9.] ETL(Extract Transform Load)  
+[10.] 민코프스키(Minkowski) 거리  
++ 표준화 거리  
+- 변수의 측정단위를 표준화한 거리입니다.  
+마할라노비스 거리  
+- 변수의 표준화와 함께 변수 간의 상관성(분포 형태)를 동시에 고려한 통계적 거리입니다.  
 
-[11.] ReLU
-[12.] 가명정보
-[13.] 특이도(Specificity)
-[14.] 슬랙 변수 (Slack Variable)
+[11.] ReLU  
+[12.] 가명정보  
+[13.] 특이도(Specificity)  
+[14.] 슬랙 변수 (Slack Variable)  
 
-* SVM의 주요 구성요소
+* SVM의 주요 구성요소  
 |구성요소|설명|
 |---|---|
 |결정 경계(Decision Boundary )|데이터 분류의 기준이 되는 경계|
@@ -154,22 +154,22 @@ tags: [bigdata, data, test, certificate]
 |서포트 벡터(Support Vector)|훈련데이터 중에서 결정경계와 가장 가까이에 있는 데이터들의 집합|
 |슬랙 변수(Slack Variables)|완벽한 분리가 불가능 할 때 선형적으로 분류를 위해 허용된오차를 위한 변수|
 
-[15.] 아프리오리(A Priori)
-[16.] KNN
+[15.] 아프리오리(A Priori)  
+[16.] KNN  
 
-[17.] 이동평균모형(Moving Average Model)
+[17.] 이동평균모형(Moving Average Model)  
 - 자기 회귀 모형(AR 모형; Auto-Regressive Model), 이동평균모형 (Moving Average model), 자기 회귀 누적 이동평균모형(ARIMA 모형 Auto Regressive Integrated Moving Average Model)은 다시 한번 개념을 확인
 
-[18.] 데이터 웨어하우스(DW; Data Warehouse)
-[19.] 향상도(Lift)
-향상도 - 우연에 의해 발생한 것인지를 판단하기 위해 연관 규칙 내 항목의 연관성 정도를 측정하는 척도  
-지지도 - 전체 거래 중 항목 A와 B를 동시에 포함하는 거래의 비율
-신뢰도 - A 상품을 샀을 때 B 상품을 살 조건부 확률에 대한 척도
-향상도 - A가 주어지지 않았을 때 B의 확률 대비 A가 주어졌을 때 B의 확률 증가 비율20. ESD(Extreme Studentized Deviation
+[18.] 데이터 웨어하우스(DW; Data Warehouse)  
+[19.] 향상도(Lift)  
+향상도 - 우연에 의해 발생한 것인지를 판단하기 위해 연관 규칙 내 항목의 연관성 정도를 측정하는 척도   
+지지도 - 전체 거래 중 항목 A와 B를 동시에 포함하는 거래의 비율  
+신뢰도 - A 상품을 샀을 때 B 상품을 살 조건부 확률에 대한 척도  
+향상도 - A가 주어지지 않았을 때 B의 확률 대비 A가 주어졌을 때 B의 확률 증가 비율20. ESD(Extreme Studentized Deviation  
 
-[21.] 와드연결법(Ward Linkage Method)
-[22.] 다중공선성(Multicollinearity)
-[23.] 특이도(Specificity)
+[21.] 와드연결법(Ward Linkage Method)  
+[22.] 다중공선성(Multicollinearity)  
+[23.] 특이도(Specificity)  
 |지표|계산식|설명|
 |---|---|---|
 |특이도(Specificity)|TN/(TN+FP)|실제로 ‘부정’인 범주 중에서 ‘부정’으로 올바르게 예측(TN)한 비율|
@@ -177,33 +177,33 @@ tags: [bigdata, data, test, certificate]
 |거짓 긍정률(FP Rate)|FP/(TN+FP)|실제로 ‘부정’인 범주 중에서 ‘긍정’으로 잘못 예측(FP)한 비율|
 |정밀도(Precision)|TP/(TP+FP)|‘긍정’으로 예측한 비율 중에서 실제로 ‘긍정’(TP)인 비율|
 
-[24.] 배깅(bagging)
+[24.] 배깅(bagging)  
 배깅(bagging)
-- 크기가 같은 표본을 여러번 단순 임의 복원추출하여 각 표본에 대해 분류기(classifiers)를 생성한 후 그 결과를 앙상블하는 기법입니다.
+- 크기가 같은 표본을 여러번 단순 임의 복원추출하여 각 표본에 대해 분류기(classifiers)를 생성한 후 그 결과를 앙상블하는 기법입니다.  
 
 부스팅(boosting)
-- 배깅의 과정과 유사하나 부트스트랩 표본을 구성하는 재표본(re-sampling) 과정에서 각 자료에 동일한 확률을 부여하는 것이 아니라, 분류가 잘못된 데이터에 더 큰 가중을 주어 표본을 추출하는 기법입니다.
+- 배깅의 과정과 유사하나 부트스트랩 표본을 구성하는 재표본(re-sampling) 과정에서 각 자료에 동일한 확률을 부여하는 것이 아니라, 분류가 잘못된 데이터에 더 큰 가중을 주어 표본을 추출하는 기법입니다.  
 
-[25.] 스테밍(Stemming)
-[26.] 손실함수(Loss function)
-[27.]  ① / (① + ③)
-[28.] 최소제곱법 (Least Square Method)
-[29.] OLAP(Online Analytical Processing)
-. SCM(Supply Chain Management) : 기업이 외부 공급업체 또는 제휴업체와 통합된 정보시스템으로 연계하여 시간과 비용을 최적화시키기 위한것으로, 자재구매, 생산/재고, 유통/판매, 고객데이터로 구성되는 정보시스템
-. CRM(Customer Relationship Management) : 기업의 내부 데이터로써 소비자들을 자신의 고객으로 만들 고, 이를 장기간 유지하고자 내부 정보를 분석하고 저장하는 데 사용하는 정보시스템
+[25.] 스테밍(Stemming)  
+[26.] 손실함수(Loss function)  
+[27.]  ① / (① + ③)  
+[28.] 최소제곱법 (Least Square Method)  
+[29.] OLAP(Online Analytical Processing)  
+. SCM(Supply Chain Management) : 기업이 외부 공급업체 또는 제휴업체와 통합된 정보시스템으로 연계하여 시간과 비용을 최적화시키기 위한것으로, 자재구매, 생산/재고, 유통/판매, 고객데이터로 구성되는 정보시스템  
+. CRM(Customer Relationship Management) : 기업의 내부 데이터로써 소비자들을 자신의 고객으로 만들 고, 이를 장기간 유지하고자 내부 정보를 분석하고 저장하는 데 사용하는 정보시스템  
 
-[30.] 지지도 1/4(=0.25), 신뢰도 3/4(=0.75), 향상도 9/8(=1.125)
-지지도 = 300/1200 = 1/4 = 0.25
-신뢰도 = 지지도 / P(A) = (300/1200) / (400/1200) = 3/4 = 0.75
-향상도 = 신뢰도 / P(B) = { (300/1200) / (400/1200) } / (800/1200) = (3/4) / (2/3) = 9/8 = 1.125
+[30.] 지지도 1/4(=0.25), 신뢰도 3/4(=0.75), 향상도 9/8(=1.125)  
+지지도 = 300/1200 = 1/4 = 0.25  
+신뢰도 = 지지도 / P(A) = (300/1200) / (400/1200) = 3/4 = 0.75  
+향상도 = 신뢰도 / P(B) = { (300/1200) / (400/1200) } / (800/1200) = (3/4) / (2/3) = 9/8 = 1.125  
 
-[31.] SOM(Self-Organizing Maps)
-[32.] 가지치기
-정지규칙은 더이상 분리가 일어나지 않도록 현재 마디가 끝마디가 되도록 하는 규칙. 의사결정나무의 깊이를 지정, 끝마디의 레코드 수의 최소 개소를 지정하는 것
+[31.] SOM(Self-Organizing Maps)  
+[32.] 가지치기  
+정지규칙은 더이상 분리가 일어나지 않도록 현재 마디가 끝마디가 되도록 하는 규칙. 의사결정나무의 깊이를 지정, 끝마디의 레코드 수의 최소 개소를 지정하는 것  
 
-[33.] 실루엣(Silhouette)
-[34.] 층화 추출법(Stratified Random Sampling)
-군집 추출법(Cluster Sampling) (= 집락추출) : 모집단을 여러 군집으로 나누고, 일부 군집의 전체 또는 일부를 추출하는 방식, 내부적으로는 이질적, 외부적으로는 동질적인 방법
+[33.] 실루엣(Silhouette)  
+[34.] 층화 추출법(Stratified Random Sampling)  
+군집 추출법(Cluster Sampling) (= 집락추출) : 모집단을 여러 군집으로 나누고, 일부 군집의 전체 또는 일부를 추출하는 방식, 내부적으로는 이질적, 외부적으로는 동질적인 방법  
 
-[35.] 프레이밍 효과
-[36.] 차분(difference)
+[35.] 프레이밍 효과  
+[36.] 차분(difference)  
