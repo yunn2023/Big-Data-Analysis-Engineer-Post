@@ -5,7 +5,7 @@ categories: [Languages, Python]
 tags: [python, coding, algorithm, bfs, queue]
 ---
 
-(깊이 우선 탐색을 위한 파이썬 알고리즘 DFS)[https://jeong-daniel.github.io/posts/%EA%B9%8A%EC%9D%B4-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/]
+[깊이 우선 탐색을 위한 파이썬 알고리즘 DFS](https://jeong-daniel.github.io/posts/%EA%B9%8A%EC%9D%B4-%EC%9A%B0%EC%84%A0-%ED%83%90%EC%83%89%EC%9D%84-%EC%9C%84%ED%95%9C-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/)
 
 ![bfs image](https://user-images.githubusercontent.com/85277660/210165887-fff3b01a-5915-4ce7-b2cf-6ae480bfff02.gif)
 
