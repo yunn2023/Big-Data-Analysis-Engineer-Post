@@ -1,5 +1,5 @@
 ---
-title: 비쥬얼 스튜디오 Visual Studio C4996 scanf 에러 해결 방법
+title: scanf에서 변수를 받을때 &를 사용하는 이유
 date:   2022-06-13 11:34:46 +0900
 categories: [Languages, C]
 tags: [c,coding]
