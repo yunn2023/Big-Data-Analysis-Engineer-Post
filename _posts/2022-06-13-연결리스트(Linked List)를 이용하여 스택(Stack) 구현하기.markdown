@@ -1,12 +1,12 @@
 ---
-title: C언어로 연결 리스트 Linked List 자료구조 만들기
+title: 연결리스트(Linked List)를 이용하여 스택(Stack) 구현하기
 date:   2022-06-13 17:21:30 +0900
 categories: [Languages, C]
 tags: [c,coding,stack,list]
 ---
 앞에서 스택과 연결리스트를 각각 구현해보았습니다. 이번에는 연결리스트를 이용해서 스택을 구현하고자 합니다. 인터페이스는 스택에서 이미 언급을 했으니 바로 코드로 넘어가겠습니다.
 
-C언어로 연결 리스트 Linked List 자료구조 만들기
+[C언어로 연결 리스트 Linked List 자료구조 만들기](https://jeong-daniel.github.io/posts/C%EC%96%B8%EC%96%B4%EB%A1%9C-%EC%97%B0%EA%B2%B0-%EB%A6%AC%EC%8A%A4%ED%8A%B8-Linked-List-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0/)
 
 [C언어로 스택 stack 자료구조 만들기](https://jeong-daniel.github.io/posts/C%EC%96%B8%EC%96%B4%EB%A1%9C-%EC%8A%A4%ED%83%9D-stack-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0/)
 
