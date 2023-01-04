@@ -1,5 +1,5 @@
 ---
-title: scanf에서 변수를 받을때 &를 사용하는 이유
+title: 동적할당과 정적할당 차이 정리 (malloc, free) 함수 사용법
 date:   2022-06-13 10:35:46 +0900
 categories: [Languages, C]
 tags: [c,coding]

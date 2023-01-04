@@ -1,60 +1,110 @@
 ---
-title: scanf에서 변수를 받을때 &를 사용하는 이유
-date:   2022-06-13 11:34:46 +0900
+title: 배열 포인터(array pointer)와 포인터 배열(pointer array) 차이 정리
+date:   2022-06-13 14:37:30 +0900
 categories: [Languages, C]
 tags: [c,coding]
 ---
 
-마이크로소프트 비쥬얼 스튜디오 13버전 이상에서 scanf를 그냥 사용하시면 다음과 같은 에러와 함께 컴파일러 실패를 합니다.
+C/C++에서는 메모리를 직접 제어하기 위해서 포인터를 사용합니다. 그러면서 포인터에서 파생되는 개념이 많은데 배열포인터/포인터배열도 마찬가지 입니다. 만약 본인이 C를 공부를하고 있다면 이것을 피할 수가 없으니 꼭 짚고 넘어갑시다.
 
-```
-error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-오류 C4996: 'scanf': 이 함수 또는 변수는 안전하지 않을 수 있습니다. 대신 scanf_s를 사용하는 것이 좋습니다. 지원 중단을 비활성화하려면 _CRT_SECURE_NO_WARNINGS를 사용하세요.
-```
+### 1. 포인터 배열 pointer array
+포인터 배열은 포인터들의 배열입니다. 즉 배열의 요소가 포인터 들로 이루어져 있습니다.
 
-scanf는 보안상의 문제 때문에 scanf_s 사용하는 것을 권장하는데요 하지만 교재나 공부자료가 오래된 것이 많아서 지금 당장은 scanf를 사용하는 편이 편할 수 있습니다. 해결하는 방법은 에러를 죽이고 그대로 실행하면 됩니다.
+![img1 view](https://user-images.githubusercontent.com/85277660/210573682-797d206d-e849-45de-b3d9-a1804a2895e8.png)
 
+배열은 자료형을 정의를 해주어야 합니다. 나는 어떤 것을 담을지 선언을 해야하는데 포인터 배열은 어떤 자료형의 포인터들이 가득 들어 있다는 것을 생각해볼 수 있습니다.
 
-에러 해결 방법 정리
+그렇다면 위 그림처럼 직접적으로 어떤 값이나 단어를 가지는것이 아니라 그 값이나 단어의 위치(주소)를 배열로 담고 있습니다.
 
-### 1. #define _CRT_SECURE_NO_WARNINGS 입력
 ```c
 #include <stdio.h>
 #include <stdlib.h>
 #define _CRT_SECURE_NO_WARNINGS
+
+int main(void){
+	const char* arr[3];
+
+	arr[0] = "AAA";
+	arr[1] = "BBB";
+	arr[2] = "CCC";
+	
+	for (int i = 0; i < 3 ; i++) {
+		printf("arr[%d]이 가르키는 값은 : %s\n", i, arr[i]);
+	}
+
+	return 0;
+}
 ```
-코드 헤더부분에다가 stdio.h같은 라이브러리를 불러올때 define으로 _CRT_SECURE_NO_WARNINGS를 지정을 해줍시다.
 
+![point](https://user-images.githubusercontent.com/85277660/210573755-bbf40c5b-651e-4dae-bd6a-0a7f7a814f88.png)
 
-### 2. SDL검사를 안 한다 설정
-![setting](https://user-images.githubusercontent.com/85277660/210571761-79517806-1c3b-4373-94b9-f51e9078e5b1.png)
+얼핏보면 그냥 배열에다가 문자열을 넣는게 아닌가 하지만 다시한번 생각하셔야 할게 있습니다. 배열의 이름은 주소입니다. char* 포인터 배열을 사용했으며 그냥 포인터가 아닌 배열을 사용했다면 한글자만 담을 수 있습니다. 하지만 포인터로 선언한 다음 각 문자열 주소에다가 어떤 것을 저장할지 지정을 해주게 되고 이를 바탕으로 불러오는 값입니다.
 
-프로젝트의 속성을 들어가신 다음
+[동적할당과 정적할당 차이 정리 (malloc, free) 함수 사용법](https://jeong-daniel.github.io/posts/%EB%8F%99%EC%A0%81%ED%95%A0%EB%8B%B9%EA%B3%BC-%EC%A0%95%EC%A0%81%ED%95%A0%EB%8B%B9-%EC%B0%A8%EC%9D%B4-%EC%A0%95%EB%A6%AC-(malloc,-free)-%ED%95%A8%EC%88%98-%EC%82%AC%EC%9A%A9%EB%B2%95/)
 
-![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210571821-eda8b876-fd25-4a05-a868-207ad9961835.png)
+마찬가지로 const char* 대신 입력을 받아서 maloc로 동적할당을 하는것 역시 가능합니다.
 
-C/C++ > 일반 > SDL 검사에서 아니오(/sdl-)을 체크를 해줍시다.
-
-![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210571843-baea5a5d-f9f6-4e0f-9859-919db319daf2.png)
-
-그리고 C/C++ > 전처리기에 들어가셔서
-
-전처리기 정의에다가
 ```c
-<_CRT_SECURE_NO_WARNINGS>
+arr[i] = (char*)malloc(sizeof(char) * len);
 ```
-를 뒤에다가 추가해주시면 됩니다. 다만 앞뒤에다가 세미콜론 ; 을 붙이셔야 합니다. ;_CRT_SECURE_NO_WARNINGS; 가 되겠네요
-
-여기까지 하시면 보통 정상적으로 scanf를 사용하고도 컴파일러가 잘 실행이 될것입니다.
-
-아래는 그래도 작동이 안된다면 한번 해보시면 됩니다.
+그럴때는 길이를 입력받아서 동적할당을 하면 됩니다.
 
 
-### 3. 솔루션 프로젝트를 만들 때 SDL검사 체크 해제하기
-![img1 SDL check](https://user-images.githubusercontent.com/85277660/210571973-68dd04a7-eeb1-4841-aa83-d15584a6df4f.jpg)
+### 2. 배열 포인터 array pointer
+배열을 가리키는 하나의 포인터입니다. 그러니까 특정 사이즈의 배열만 가리킬 수 있는 하나의 포인터가 됩니다.
 
-### 4. #pragma warning(disable : 4996) 추가
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210574535-15b38255-36a7-49d3-b9a7-b10961489072.jpg)
+
 ```c
-#pragma warning(disable : 4996) 
+#include <stdio.h>
+#include <stdlib.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main(void){
+	char(*arr)[3];
+
+	char temp_1[3] = "AAA";
+	char temp_2[3] = "BBB";
+	char temp_3[3] = "CCC";
+	printf("temp_1[3]의 주소 : %p\n", temp_1);
+	printf("temp_2[3]의 주소 : %p\n", temp_2);
+	printf("temp_3[3]의 주소 : %p\n", temp_3);
+	
+	arr = &temp_1;
+	printf("arr의 주소 : %p\t 문자열 : ", arr);
+	for(int i=0; i< (int)sizeof(*arr); i++){
+		printf("%c", (*arr)[i]);
+	}
+	printf("\n");
+
+	arr = &temp_2;
+	printf("arr의 주소 : %p\t 문자열 : ", arr);
+	for (int i = 0; i < (int)sizeof(*arr); i++) {
+		printf("%c", (*arr)[i]);
+	}
+	printf("\n");
+
+	arr = &temp_3;
+	printf("arr의 주소 : %p\t 문자열 : ", arr);
+	for (int i = 0; i < (int)sizeof(*arr); i++) {
+		printf("%c", (*arr)[i]);
+	}
+	printf("\n");
+
+	return 0;
+}
 ```
-![pragma warning](https://uer-images.githubusercontent.com/85277660/210572028-644b5a7f-5cce-4c09-b06b-d0da7b2375b3.jpg)
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210574583-aea4695b-b1a6-4ad8-8c69-cef5a35736b5.png)
+
+한글 출력이 매끄럽지 않아서 좀 이상하게 보일지모르겠는데 주소값만 보시면 됩니다.
+
+temp_1, temp_2, temp_3를 참조하면 arr주소도 똑같이 가르키는 것을 볼 수 있습니다.
+
+그렇다면 char[5]를 참조하면요?
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210574617-d90c945a-759f-4799-b5ac-4866317a4c65.png)
+
+temp_3를 5개로 해서 출력을 하면 에러는 뜨지 않지만 문자열이 CCCCC가 아니라 3개로 짤립니다.
+
+컴파일러에 따라서 에러를 출력할 수도 있습니다.
