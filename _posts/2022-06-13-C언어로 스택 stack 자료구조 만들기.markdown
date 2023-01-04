@@ -101,7 +101,7 @@ void push(Stack* s, int item) {
 
 일단 top는 커서라고 생각하시면 됩니다. 일단 아무 데이터도 없다고 가정을 합시다. top은 맨처음에 0으로 초기화가 됩니다. 그렇다면 data[0]에다가 item을 집어 넣게 됩니다.
 
-그리고 top뒤에 ++가 붙어 있는데 이거는 증감연산자의 후치증가입니다. 후치증가는 <코드 한줄이 끝난뒤에 증가>하는 것입니다. data[0]에 데이터를 집어넣고, top는 후치증가를 했으니 1을 가리키게 됩니다. 언제까지? top의 값이 MAX_SIZE가 될때까지 입니다.
+그리고 top뒤에 ++가 붙어 있는데 이거는 증감연산자의 후치증가입니다. 후치증가는 "코드 한줄이 끝난뒤에 증가"하는 것입니다. data[0]에 데이터를 집어넣고, top는 후치증가를 했으니 1을 가리키게 됩니다. 언제까지? top의 값이 MAX_SIZE가 될때까지 입니다.
 
 그리고 push에 스택 s를 바로 넣는 것이 아니라 포인터로 집어 넣는 이유는 간접참조를 통해서 s를 바로 변경하기 위함입니다. 포인터로 지정을 하지 않고 바로 받게 되면 push안에 임시 매개변수가 생성되어 함수안에서만 작동을 하고 우리가 원하는 스택 s의 값이 변경되지 않는 문제가 있습니다.
 
@@ -126,3 +126,101 @@ int isEmpty(const Stack* s) {
 }
 ```
 top의 위치가 MAX_SIZE인지 확인하면 됩니다. 만찬가지로 비어있는지는 0을 반환하는지 확인하면 됩니다. 여기서 Stack변수를 받을때 const가 있습니다.
+
+[C언어에서 const를 사용하는 이유 선언의 의미]()
+
+앞에서 push나 pop같은 경우에는 Stack를 제어하기 위했습니다 하지만 isFull, isEmpty는 스택의 상태만 확인하는 것이지 직접 변경하지 않습니다. 그러니 만약의 상황을 대비해서 const로 조작을 하지 못하게 고정합니다.
+
+ 
+
+이제 인터페이스가 만들어졌습니다. 이제 전체 코드를 만들어 봅시다.
+
+```c
+#include <stdio.h>
+#include <stdlib.h> // 동적할당을 위한 malloc, free 함수
+#include <assert.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+struct _stack {
+	int* data;
+	int top;
+	int size;
+};
+typedef struct _stack Stack;
+
+Stack* mkStack(int size);
+void push(Stack* s, int item);
+int pop(Stack* s);
+int isEmpty(const Stack* s);
+int isFull(const Stack* s);
+
+void error(const char* msg);
+
+void error(const char* msg) {
+	printf("오류: %s",msg);
+	printf("프로그램을 종료합니다. \n");
+}
+
+Stack* mkStack(int size){
+	Stack* s = (Stack*)malloc(sizeof(Stack));
+	assert(size > 0);
+	assert(s);
+	s->size = size;
+	s->data = (int*)malloc(sizeof(int) * size);
+	assert(s->data);
+	s->top = 0;
+	return s;
+}
+
+void push(Stack *s, int item) {
+	if (isFull(s)) error("스택이 가득찼습니다.");
+	s->data[s->top++] = item;
+}
+
+int pop(Stack* s) {
+	if (isEmpty(s)) error("스택이 비어있습니다.");
+	return s->data[--s->top];
+}
+
+int isFull(const Stack* s) {
+	if (s->top == s->size) return 1;
+	else return 0;
+}
+
+int isEmpty(const Stack* s) {
+	if (s->top == 0) return 1;
+	else return 0;
+}
+
+int main() {
+	int data;
+	int n, i;
+	Stack* s; //스택을 가리킬 포인터
+
+	printf("몇 개의 정수를 입력할 까요? : ");
+	scanf("%d", &n);
+	if (n <= 0)
+		error("정수의 개수를 잘못 입력했습니다.");
+
+	s = mkStack(n);
+
+	printf("%d개의 정수를 입력해주세요 : ", n);
+	for (i = 0; i < n; ++i) {
+		scanf("%d", &data);
+		push(s, data);
+	}
+
+	printf("입력한 정수를 역순으로 출력합니다 : ");
+	while (!isEmpty(s)) {
+		data = pop(s);
+		printf("%d ", data);
+	}
+	printf("\n");
+
+	return 0;
+}
+```
+
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210576795-2bbd224d-5566-4d6a-bcc3-3a00f783b639.png)
+
+이렇게 C언어로 스택자료구조를 구현해보았습니다. 이정도면 암기할 필요없이 이해만 하신다면 충분히 만들 수 있을 것입니다.
