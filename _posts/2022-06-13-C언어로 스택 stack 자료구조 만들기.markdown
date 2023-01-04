@@ -127,11 +127,9 @@ int isEmpty(const Stack* s) {
 ```
 top의 위치가 MAX_SIZE인지 확인하면 됩니다. 만찬가지로 비어있는지는 0을 반환하는지 확인하면 됩니다. 여기서 Stack변수를 받을때 const가 있습니다.
 
-[C언어에서 const를 사용하는 이유 선언의 의미]()
+[C언어에서 const를 사용하는 이유 선언의 의미](https://jeong-daniel.github.io/posts/C%EC%96%B8%EC%96%B4%EC%97%90%EC%84%9C-const%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0%EC%99%80-%EC%84%A0%EC%96%B8%EC%9D%98-%EC%9D%98%EB%AF%B8/)
 
 앞에서 push나 pop같은 경우에는 Stack를 제어하기 위했습니다 하지만 isFull, isEmpty는 스택의 상태만 확인하는 것이지 직접 변경하지 않습니다. 그러니 만약의 상황을 대비해서 const로 조작을 하지 못하게 고정합니다.
-
- 
 
 이제 인터페이스가 만들어졌습니다. 이제 전체 코드를 만들어 봅시다.
 

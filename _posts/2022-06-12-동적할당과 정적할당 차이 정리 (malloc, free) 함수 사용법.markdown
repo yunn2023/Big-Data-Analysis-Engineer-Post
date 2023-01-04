@@ -2,7 +2,7 @@
 title: 동적할당과 정적할당 차이 정리 (malloc, free) 함수 사용법
 date:   2022-06-13 10:35:46 +0900
 categories: [Languages, C]
-tags: [c,coding]
+tags: [c,coding,memory]
 ---
 
 C언어에서 메모리 할당을 위한 방법으로 크게 정적할당과 동적할당이 있습니다.

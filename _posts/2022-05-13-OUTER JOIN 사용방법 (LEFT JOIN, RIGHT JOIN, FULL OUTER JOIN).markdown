@@ -2,7 +2,7 @@
 title: OUTER JOIN 사용방법 (LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN)
 date:   2022-05-13 11:38:46 +0900
 categories: [Tech, SQL]
-tags: [sql, db, nosql, jpa]
+tags: [sql, db]
 ---
 Oracle에서 INNER(내부) Join과 Outer(외부) 조인이 있는데 여기서 외부조인은 동일한 값이 없는 행도 반환할 때 사용하는 구문이라고 한다. 즉 두 테이블을 조인할때 조건에 해당하지 않는 데이터도 표시한다.
 

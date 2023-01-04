@@ -2,7 +2,7 @@
 title: 배열 포인터(array pointer)와 포인터 배열(pointer array) 차이 정리
 date:   2022-06-13 14:37:30 +0900
 categories: [Languages, C]
-tags: [c,coding]
+tags: [c,coding,pointer,array]
 ---
 
 C/C++에서는 메모리를 직접 제어하기 위해서 포인터를 사용합니다. 그러면서 포인터에서 파생되는 개념이 많은데 배열포인터/포인터배열도 마찬가지 입니다. 만약 본인이 C를 공부를하고 있다면 이것을 피할 수가 없으니 꼭 짚고 넘어갑시다.
