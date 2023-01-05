@@ -1,6 +1,6 @@
 ---
-title: 파이썬 랜덤모듈 사용방법 random
-date:   2022-07-18 14:51:11 +0900
+title: 파이썬 로또번호 생성기 코드 작성방법
+date:   2022-07-18 14:59:11 +0900
 categories: [Languages, Python]
 tags: [python, random, module]
 comment: true
