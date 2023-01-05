@@ -24,7 +24,6 @@ random.random()
 ```
 
 ![random](https://user-images.githubusercontent.com/85277660/210786867-cb1c7d26-11b3-4cc1-8462-139f4f0dbf00.png)
-
 ![error random](https://user-images.githubusercontent.com/85277660/210786872-a2d9b35e-689d-4093-8e74-a872311dfc2f.png)
 
 당연히 괄호안에다가 숫자를 집어 넣으면 takes no arguments 아무 인자도 취하지 않는다고 알려줌
