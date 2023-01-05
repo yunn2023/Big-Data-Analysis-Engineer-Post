@@ -1,5 +1,5 @@
 ---
-title: 'utf-8' codec can't decode byte 0xa1 in position 18052 invalid start byte 해결 방법
+title: utf-8 codec can't decode byte 0xa1 in position 18052 invalid start byte 해결 방법
 date:   2022-06-24 13:51:00 +0900
 categories: [Data_Sceince, Pandas]
 tags: [pandas, data, python]
