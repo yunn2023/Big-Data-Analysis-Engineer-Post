@@ -1,24 +1,29 @@
 ---
-title: SpringBoot 서버 포트 변경하는 방법
-date:   2022-07-28 20:45:10 +0900
+title: 스프링 부트에서 이제는 @RunWith 보이지 않는 이유
+date:   2022-07-30 12:33:10 +0900
 categories: [Tech, Spring]
-tags: [java, srping, server, port]
+tags: [java, srping, server]
 ---
 
-스프링부트에서는 기본적으로 8080포트를 기본값으로 두지만 다른 자원이 이미 포트번호를 받아서 사용할 경우 아래처럼 WAS가 fail이 뜬다.
+[Junit5에서 import org.junit.Test / org.junit.runner.RunWith 문제 해결 방법](https://jeong-daniel.github.io/posts/Junit5%EC%97%90%EC%84%9C-import-org.junit.Test-org.junit.runner.RunWith-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95/)
 
-![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210802448-578374d8-7c58-4778-b693-7cb48ab097f7.png)
+한 2~3년전 스프링부트 책을 보다보면 지금과는 코드가 달라서 난감한데 그중에서도 @RunWith가 있다. 주로 테스트 코드에서 사용하는 것인데 @RunWith이 무엇이고 이제는 어떻게 달라졌는지 보자
 
-이럴때 기본 포트 번호를 변경하면 된다.
+Junit4에서는 테스트의 러너(Runner)를 확장하는 방법으로 @RunWith 어노테이션에 커스텀 테스트 러너를 설정해주는 방법이 있다. 그래서 예전 스프링 강의와 코드를 살펴보면 테스트코드를 작성할 때 주로 @RunWith(SpringRunner.class) 같은 코드를 볼 수 있다.
 
-![run code](https://user-images.githubusercontent.com/85277660/210802471-f98e855b-8208-4407-9fbb-000266b76da8.png)
+![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210803124-2d302ddb-6f50-4ab8-88ed-8b8da56e9414.png)
 
-스프링이니셜라이즈로 생성했을때 파일 디렉토리는 main-java-resources에 application.properties에 스프링부트 속성을 설정할 수 있는데 여기에서
+하지만 Junit5에서는 @RunWith가 아닌 Extension이라는 일관된 방법을 통해 테스트를 실행한다. 마찬가지로 @ExtendWith(MyExtension.class)처럼 구현체를 지정할 수 있는데 이때 달라진 점이 있다.
 
-server.port=포트번호
+* 메타 애노테이션을 지원한다. @ExtendWith(SpringExtension.class)를 생략
+* 여러번 중복 사용할 수 있다.
 
-파일안에 아무내용이 없어도 상관없이 직접 지정하면 된다.
+```java
+@SpringBootTest
+@AutoConfigureMockMvc
+class PostControllerTest {
+...
+}
+```
 
-![spring run](https://user-images.githubusercontent.com/85277660/210802509-3d89bc7a-573f-4323-aba5-072f5a958375.png)
-
-잘 작동하는 것을 확인!
+위 코드에서는  @RunWith나 @ExtendWith가 없지만 사실 @ExtendWith(SpringExtension.class)를 가지고 있는것과 같다. @SpringBootTest가 이미 그 코드를 가지고 있기 때문
