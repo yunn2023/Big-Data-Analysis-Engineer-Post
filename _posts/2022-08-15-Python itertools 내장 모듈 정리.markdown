@@ -2,7 +2,7 @@
 title: Python itertools 내장 모듈 정리
 date:   2022-08-15 14:49:30 +0900
 categories: [Languages, Python]
-tags: [python]
+tags: [python, module, library]
 comment: true
 ---
 
