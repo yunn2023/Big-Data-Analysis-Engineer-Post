@@ -168,7 +168,7 @@ result = sorted(q,key=lambda x:x[1] ) #음식의 번호 기준으로 정렬
 
 ![img1 daumcdn](https://user-images.githubusercontent.com/85277660/210990614-d2fb8474-7313-488e-ada5-6d3173eb46e0.png)
 
-q에서 분명 6, 8 순서로 들어 있는데 sorted에서 x[1](인덱스) 기준으로 새로 정렬을 하면 result가 만들어집니다.
+q에서 분명 6, 8 순서로 들어 있는데 sorted에서 x/[1/]/(인덱스/) 기준으로 새로 정렬을 하면 result가 만들어집니다.
 
 남은 것은 3이고 이를 2(길이)로 나눈 나머지는 1
 
