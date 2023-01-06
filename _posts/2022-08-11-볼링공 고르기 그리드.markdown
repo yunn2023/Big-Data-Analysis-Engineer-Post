@@ -1,5 +1,5 @@
 ---
-title: 곱하기 혹은 더하기 그리드
+title: 볼링 공 고르기 그리드
 date:   2022-08-11 20:38:41 +0900
 categories: [Coding_Test, Others]
 tags: [coding, python, algorithm, greedy]
