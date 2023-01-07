@@ -83,6 +83,7 @@ def word(a,b):
             count+=1
     return count
 ```
+
 일단 BFS를 위해서 deque를 사용하고 두 단어를 비교하는 함수를 하나 만들어 줍니다. 조건에서 단어의 길이는 똑같고 하한번당 하나의 단어만 바꿀 수 있다고 했으니 그냥 슬라이스로 잘라서 단어가 같은지만 보면 됩니다. 단어가 다르면 거리를 추가해주고 반환합시다.
 
 ```py
@@ -150,3 +151,48 @@ graph_map = [[0]*length for n in range(length)]
 while문에서 먼저 시작과 단어거리가 1인 단어들이 들어가있는데 차례로 확인을 해보자. 만약 우리가 찾고자 하는 단어의 인덱스를 만나게되면 while문을 빠져나온다. 그리고 이동한 단어에서 단어거리가 1인 녀석들이 있는지 찾아보고 방문도 하지 않았으며(어차피 우리 목표는 최단거리라서 먼저 했다면 그 값이 무조건 최단거리다) 단어 거리가 1이라면 큐에 추가를 하고 visited에 거리를 갱신한다.
 
 그리고 마지막에다가 거리를 1추가 하는 이유는 now == find에서 인덱스를 만났을때 거리 갱신을 안하고 바로 빠져나왔기 때문에 1을 더해준다.
+
+[네트워크 프로그래머스 Lv2 BFS](https://jeong-daniel.github.io/posts/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-Lv2-BFS/)
+
+바로 이를 알았던 이유는 오늘 바로 앞에서 2차원 배열로 풀었다가 에러 난거 그래프로 푸니 풀렸기 때문...
+
+```py
+from collections import deque
+
+def solution(n, edge):
+    
+    graph = [[]*n for i in range(n+1)]
+    for x,y in edge:
+        graph[x].append(y)
+        graph[y].append(x)
+        
+    visited = [-1]*(n+1)
+    
+    start = 1
+    q = deque()
+    answer = 0
+    q.append(start)
+    visited[start] = 0
+    while q:
+        now = q.popleft()
+        for j in graph[now]:
+            if visited[j] == -1:
+                visited[j] = visited[now]+1
+                q.append(j)
+                
+    a = max(visited)
+    return visited.count(a)
+```
+
+뭔가 코드도 간결해졌다. 그리고 그래프 정리 할때 무방향 그래프이니 양쪽으로 다 체크를 해준다(방향이 있으면 당연하게도 이렇게 하면 안됨)
+
+마지막은 max값 함수로 받아서 count로 처리하니 더 깔끔....
+
+![score](https://user-images.githubusercontent.com/85277660/211157882-72ad6dfc-aa16-444d-b78f-a3d90dbc9f87.png)
+
+앞에서 테스트7번 8500ms나오고 1기가 넘게 나오던게 21ms에다가 17mb로 줄었다......
+
+
+오늘의 교훈
+
+시+공간복잡도를 고려해서 크다 싶으면 2차원 배열대신 그래프로 문제 풀기
