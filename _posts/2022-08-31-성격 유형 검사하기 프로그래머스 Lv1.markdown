@@ -1,8 +1,8 @@
 ---
-title: 괄호 변환 프로그래머스 자료구조
-date:   2022-08-17 20:45:10 +0900
+title: 성격 유형 검사하기 프로그래머스 Lv1
+date:   2022-08-31 13:03:10 +0900
 categories: [Coding_Test, 프로그래머스]
-tags: [coding, python, algorithm, simulation]
+tags: [coding, python, algorithm]
 ---
 
 [https://school.programmers.co.kr/learn/courses/30/lessons/60058](https://school.programmers.co.kr/learn/courses/30/lessons/60058)
