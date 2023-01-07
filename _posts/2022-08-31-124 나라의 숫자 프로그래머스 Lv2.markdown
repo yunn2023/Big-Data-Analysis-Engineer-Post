@@ -1,5 +1,5 @@
 ---
-title: 124 나라의 숫자 프로그래머스
+title: 124 나라의 숫자 프로그래머스 Lv2
 date:   2022-08-31 21:00:10 +0900
 categories: [Coding_Test, 프로그래머스]
 tags: [coding, python, algorithm]
