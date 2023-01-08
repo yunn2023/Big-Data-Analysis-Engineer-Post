@@ -21,12 +21,12 @@ tags: [review, vision, ai, dl]
 
 ![img1 daumcdn](https://user-images.githubusercontent.com/85277660/211181150-63c62832-eebb-4cc5-bf4e-181833926df3.png)
 
-출처 : [https://sites.google.com/site/machlearnwiki/bayesian-learning/saengseong-model](https://sites.google.com/site/machlearnwiki/bayesian-learning/saengseong-model)
-
-판별모델(Discriminative Model)이란 데이터 X가 주어졌을때 Label Y가 나타날 조건부확률 P(Y|X)를 직접적으로 반환하는 모델입니다.
+출처 : [https://sites.google.com/site/machlearnwiki/bayesian-learning/saengseong-model](https://sites.google.com/site/machlearnwiki/bayesian-learning/saengseong-model)  
 
 
-생성모델(Generative Model)이란 training data가 주어졌을 때 이 training data가 가지는 real 분포와 같은 분포에서 sampling된 값으로 new data를 생성하는 model을 말합니다.
+판별모델(Discriminative Model)이란 데이터 X가 주어졌을때 Label Y가 나타날 조건부확률 P(Y|X)를 직접적으로 반환하는 모델입니다.  
+
+생성모델(Generative Model)이란 training data가 주어졌을 때 이 training data가 가지는 real 분포와 같은 분포에서 sampling된 값으로 new data를 생성하는 model을 말합니다.  
 
 [https://thispersondoesnotexist.com](https://thispersondoesnotexist.com)
 
