@@ -19,12 +19,12 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Data Sceince                          # the main title
+title: Computer Vision Engineer                          # the main title
 
-tagline: 데이터과학자의 방에 오신 것을 환영합니다.   # it will display as the sub-title
+tagline: 컴퓨터비전 엔지니어가 되기 위해   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  컴퓨터비전과 인공지능을 연구하는 데이터과학자를 꿈꾸며
+  컴퓨터비전과 인공지능을 연구하는 엔지니어가 목표입니다.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://jeong-daniel.github.io/'
