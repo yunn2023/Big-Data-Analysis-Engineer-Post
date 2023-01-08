@@ -1,72 +1,58 @@
 ---
-title: 숨바꼭질 백준 1697번 BFS
-date:   2022-10-19 16:05:30 +0900
+title: 유기농 배추 백준 1012번 BFS
+date:   2022-10-19 17:00:30 +0900
 categories: [Coding_Test, 백준]
 tags: [coding, python, algorithm, bfs]
 ---
 
-[https://www.acmicpc.net/problem/1697](https://www.acmicpc.net/problem/1697)
+[https://www.acmicpc.net/problem/1012](https://www.acmicpc.net/problem/1012)
 
 문제
-수빈이는 동생과 숨바꼭질을 하고 있다. 수빈이는 현재 점 N(0 ≤ N ≤ 100,000)에 있고, 동생은 점 K(0 ≤ K ≤ 100,000)에 있다. 수빈이는 걷거나 순간이동을 할 수 있다. 만약, 수빈이의 위치가 X일 때 걷는다면 1초 후에 X-1 또는 X+1로 이동하게 된다. 순간이동을 하는 경우에는 1초 후에 2*X의 위치로 이동하게 된다.
+차세대 영농인 한나는 강원도 고랭지에서 유기농 배추를 재배하기로 하였다. 농약을 쓰지 않고 배추를 재배하려면 배추를 해충으로부터 보호하는 것이 중요하기 때문에, 한나는 해충 방지에 효과적인 배추흰지렁이를 구입하기로 결심한다. 이 지렁이는 배추근처에 서식하며 해충을 잡아 먹음으로써 배추를 보호한다. 특히, 어떤 배추에 배추흰지렁이가 한 마리라도 살고 있으면 이 지렁이는 인접한 다른 배추로 이동할 수 있어, 그 배추들 역시 해충으로부터 보호받을 수 있다. 한 배추의 상하좌우 네 방향에 다른 배추가 위치한 경우에 서로 인접해있는 것이다.
 
-수빈이와 동생의 위치가 주어졌을 때, 수빈이가 동생을 찾을 수 있는 가장 빠른 시간이 몇 초 후인지 구하는 프로그램을 작성하시오.
+한나가 배추를 재배하는 땅은 고르지 못해서 배추를 군데군데 심어 놓았다. 배추들이 모여있는 곳에는 배추흰지렁이가 한 마리만 있으면 되므로 서로 인접해있는 배추들이 몇 군데에 퍼져있는지 조사하면 총 몇 마리의 지렁이가 필요한지 알 수 있다. 예를 들어 배추밭이 아래와 같이 구성되어 있으면 최소 5마리의 배추흰지렁이가 필요하다. 0은 배추가 심어져 있지 않은 땅이고, 1은 배추가 심어져 있는 땅을 나타낸다.
 
-마찬가지 입니다. 1차원 BFS라고 보면 됩니다.
+---
 
-```py
-from collections import deque
-n, m = map(int,input().split())
-map_list = [0]*200001
-map_list[n] = 1
-queue = deque([n])
+[그림 백준 1926번 BFS](https://jeong-daniel.github.io/posts/%EA%B7%B8%EB%A6%BC-%EB%B0%B1%EC%A4%80-1926%EB%B2%88-BFS/)
 
-while queue:
-    curr = queue.popleft()
-    nx = curr-1
-    ny = curr+1
-    nz = curr*2
-    if nx == (m) or ny == (m) or nz == (m):
-        print(map_list[curr])
-        break
-    if map_list[nx]==0 and nx>=0:
-        queue.append(nx)
-        map_list[nx] = map_list[curr]+1
-    if map_list[ny]==0 and ny>=0:
-        queue.append(ny)
-        map_list[ny] = map_list[curr]+1
-    if map_list[nz]==0 and nz>=0:
-        queue.append(nz)
-        map_list[nz] = map_list[curr]+1
-```
-
-그런데 인덱스 에러나 틀렸다고 하는데..... 이유는 잘 모르겠습니다. 범위는 100,000까지라고 했지만 x2를 하기 때문에 100,000을 넘을수가 있고 배열은 0부터 계산을 하기 때문에 200,001로 했습니다. (실제로 200,000을하면 인덱스 에러가 납니다)
-
-결국 한번 돌때마다 나보다 1작은 것 1보다 큰것 2를 곱한 값이 들어가는데 -1로 가게 되면 배열에서는 오히려 제일 큰것을 건드리는 위험이 있고 논리적으로 0보다 작은 값이 나올때 제대로된 값을 얻을 수 없습니다. 
+지난번에 풀었던 그림과 비슷한 유형의 BFS문제입니다. 기본정도는 보자마자 고민없이 푸는 수준이 되어야 난이도를 높여 갈 수 있으니 해봅시다. 다만 이번 문제는 테스트케이스가 한개가 아니라 n개 입력을 받는 식이네요
 
 ```py
 from collections import deque
-n, m = map(int,input().split())
-map_list = [-1]*200001
-map_list[n] = 0
-queue = deque([n])
+dx = [0,0,1,-1]
+dy = [1,-1,0,0]
 
-def oper(num):
-    return [num-1,num+1,num*2]
-
-while map_list[m]==-1:
-    curr = queue.popleft()
-    for i in oper(curr):
-        if i < 0 or i > 100000:
-            continue
-        if map_list[i] != -1:
-            continue
-        map_list[i] = map_list[curr]+1
-        queue.append(i)
-        
-print(map_list[m])
+loop = int(input())
+for i in range(loop):
+    n, m, num = map(int,input().split())
+    map_list = [[0]*n for _ in range(m)]
+    dist = [[-1]*n for _ in range(m)]
+    for j in range(num):
+        x, y = map(int,input().split())
+        map_list[y][x] = 1
+    count = 0
+    queue = deque([])
+    #입력받은 지도 돌기 시작
+    for y in range(m):
+        for x in range(n):
+        	#조건에 맞는 곳을 찾으면 큐에 넣고 BFS돌리기
+            if map_list[y][x] == 1 and dist[y][x] == -1:
+                count += 1
+                queue.append([y,x])
+                #BFS시작
+                while queue:
+                    curr = queue.popleft()
+                    for k in range(4):
+                        nx = curr[1] + dx[k]
+                        ny = curr[0] + dy[k]
+                        if nx < 0 or nx >= n or ny < 0 or ny >= m:
+                            continue
+                        if map_list[ny][nx] != 1 or dist[ny][nx] != -1:
+                            continue
+                        queue.append([ny,nx])
+                        dist[ny][nx] = 1
+    print(count)
 ```
 
-이번에도 바킹독의 C++정답을 파이썬으로 고쳤습니다. 확실히 종료조건은 큐가 중요한게 아니라 찾았는가로두고 반복문도 따로 3가지를 두는게 아니라 이렇게 리스트로 빼버리니 훨씬 보기 좋아졌네요
-
-그런데 제 답은 왜틀렸는지는 아직 잘 모르겠네요 나중에 다시한번 봐야겠습니다.
+흐름 놓치지 말고 하나하나 스텝바이스텝으로 구현해보면 됩니다.
