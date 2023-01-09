@@ -19,7 +19,7 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Computer Vision Engineer                          # the main title
+title: Computer Vision Engineer's Room                          # the main title
 
 tagline: 컴퓨터비전 엔지니어가 되기 위해   # it will display as the sub-title
 
