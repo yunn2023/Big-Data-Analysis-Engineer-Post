@@ -14,6 +14,12 @@ Undergraduate student at Pusan National University
 First major : [<u>Aerospace Engineering</u>](https://github.com/Jeong-Daniel/aerospace_engineering)  
 Second major : [<u>BigData Science</u>](https://github.com/Jeong-Daniel/Bigdata_engineering)  
 
+## Working
+* Metaverse Entertainmnets  
+22.12.01 ~ 23.01.31 : TD팀 Software Engineer
+* LIG Nex1
+23.02.06 ~ : G1 Professional
+
 ## Certification & Course
 *   ADsP(Advanced Data Analytics Semi-Professional)  
 *   Big Data analysis Engineering National certificate  
