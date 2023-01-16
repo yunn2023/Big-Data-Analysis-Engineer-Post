@@ -16,9 +16,9 @@ Second major : [<u>BigData Science</u>](https://github.com/Jeong-Daniel/Bigdata_
 
 ## Working
 * Metaverse Entertainmnets  
-22.12.01 ~ 23.01.31 : TD팀 Software Engineer
-* LIG Nex1
-23.02.06 ~ : G1 Professional
+22.12.01 ~ 23.01.31 : TD팀 Software Engineer  
+* LIG Nex1  
+23.02.06 ~ : G1 Professional  
 
 ## Certification & Course
 *   ADsP(Advanced Data Analytics Semi-Professional)  
