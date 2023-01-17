@@ -16,7 +16,7 @@ Second major : [<u>BigData Science</u>](https://github.com/Jeong-Daniel/Bigdata_
 
 ## Working
 ![meta ci](https://user-images.githubusercontent.com/85277660/212669538-41cc5155-f346-4479-9690-3cd6111824f5.png)   
-> * Metaverse Entertainmnets  
+> * Metaverse Entertainmnet  
 > TD팀 Software Engineer   
 > 22.12.01 ~ 23.01.31    
 
