@@ -21,7 +21,7 @@ timezone: Asia/Seoul
 
 title: Computer Vision Engineer's Room                          # the main title
 
-tagline: 컴퓨터비전 엔지니어가 되기 위해   # it will display as the sub-title
+tagline: 컴퓨터비전 엔지니어   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   컴퓨터비전과 인공지능을 연구하는 엔지니어가 목표입니다.
