@@ -53,7 +53,7 @@ sudo cat /home/bitnami/bitnami_credentials
 ```
 이렇게 입력을 하면 유저네임과 패스워드를 확인 할 수 있습니다.
 
-![라이트세일 SSH 패스워드 확인](https://user-images.githubusercontent.com/85277660/222432210-e429963e-883d-420e-a915-658419315c00.png")
+![라이트세일 SSH 패스워드 확인](https://user-images.githubusercontent.com/85277660/222432210-e429963e-883d-420e-a915-658419315c00.png)
 
 이를 저장을 해두고 이제 워드프레스 관리자 페이지로 가봅시다.
 
