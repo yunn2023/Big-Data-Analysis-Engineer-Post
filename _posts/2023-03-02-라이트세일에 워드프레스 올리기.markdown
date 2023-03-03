@@ -7,6 +7,9 @@ tags: [blog, aws, lightsail]
 
 미루고 미루다가 휴일을 기념으로 늦저녁에 워드프레스 블로그 만들기를 시작했습니다. AWS 계정을 만들고 워드프레스 블로그를 만드는것은 정말 순식간에 할 수 있고 인터넷에 앞선 분들이 도메인까지 설정하는것을 친절하게 설명을 해두었는데 저도 왜 이제야 시작하나 싶네요 이제 돈빠져 나가기 시작하니까 블로그를 빠르게 만들어 보겠습니다.
 
+[AWS 라이트세일](https://aws.amazon.com/ko/lightsail/)
+
+
 ![AWS 메뉴](https://user-images.githubusercontent.com/85277660/222428539-c448a503-73d4-46df-a4cb-00eede8a43ee.png)
 
 AWS 계정을 생성하고 서비스나 lightsail을 검색하면 위 사진 처럼 라이트세일이 나오게 됩니다.
