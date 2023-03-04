@@ -1,5 +1,5 @@
 ---
-title:  라이트세일 파일질라 FTP 접속 방법
+title:  AWS 라이트세일 파일질라 FTP 접속 방법
 date:   2023-03-03 20:20:46 +0900
 categories: [Blog, WordPress]
 tags: [blog, aws, lightsail, ftp]

@@ -1,5 +1,5 @@
 ---
-title:  라이트세일에 워드프레스 설정하는 방법
+title:  AWS 라이트세일에 워드프레스 설정하는 방법
 date:   2023-03-02 21:40:46 +0900
 categories: [Blog, WordPress]
 tags: [blog, aws, lightsail]
